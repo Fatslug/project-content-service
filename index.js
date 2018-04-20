@@ -5,8 +5,10 @@ const chalk = require('chalk'); // colorful console
 
 const db = require('./src/db');
 
+const ENV = process.env.NODE_ENV ? process.env.NODE_ENV : 'local';
+
 // Load environment variables from .env file, where API keys and passwords are configured.
-dotenv.load({ path: 'env/.env.'+process.env.NODE_ENV });
+dotenv.load({ path: 'env/.env.'+ENV });
 
 // Setup Express
 var app = express();
@@ -21,6 +23,5 @@ app.use('/components', componentRoutes);
 
 // Start app
 app.listen(app.get('port'), () => {
-	console.log('%s App is running at http://localhost:%d in %s mode', chalk.green('✓'), app.get('port'), app.get('env'));
-	console.log('Press CTRL-C to stop\n');
+	console.log('%s App is running at http://localhost:%d in %s mode', chalk.green('✓'), app.get('port'), ENV);
 });

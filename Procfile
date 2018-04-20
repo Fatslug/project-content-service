@@ -1,1 +1,1 @@
-web: node index
+web: NODE_ENV=dev node index

@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
+const chalk = require('chalk');
 
 dotenv.load({ path: 'env/.env.dev' });
 

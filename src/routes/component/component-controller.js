@@ -14,10 +14,19 @@ const FIELD = chalk.black.bgMagenta('FieldID');
 const Component = require('../../schema/component');
 const Field = require('../../schema/field').model;
 
+/////////
+////////
+///////
+//////
+/////
+////
+///
+//
 //
 // ALL COMPONENTS
 //
-// GET components/
+// [GET] components/
+//
 exports.getAllComponents = (req, res) => {
     console.log(GET, ' all components');
 
@@ -32,7 +41,9 @@ exports.getAllComponents = (req, res) => {
         return res.status(200).send(allComponents);
     });
 }
-// POST components/
+//
+// [POST] components/
+//
 exports.createComponent = (req, res) => {
     console.log(CREATE, ' a component');
     
@@ -50,10 +61,19 @@ exports.createComponent = (req, res) => {
     });
 }
 
+/////////
+////////
+///////
+//////
+/////
+////
+///
+//
 //
 // COMPONENT BY COMPONENT ID
 //
-// GET components/:componentID
+// [GET] components/:componentID
+// 
 exports.getComponentByID = (req, res) => {
     console.log(GET, COMPONENT);
 
@@ -73,7 +93,9 @@ exports.getComponentByID = (req, res) => {
         return res.status(200).send(component);
     })
 }
-// PUT components/:componentID
+// 
+// [PUT] components/:componentID
+// 
 exports.updateComponentByID = (req, res) => {
     console.log(UPDATE, COMPONENT);
 
@@ -97,7 +119,9 @@ exports.updateComponentByID = (req, res) => {
         return res.status(200).send(component);
     });
 }
-// DELETE components/:componentID
+// 
+// [DELETE] components/:componentID
+// 
 exports.deleteComponentByID = (req, res) => {
     console.log(DELETE, COMPONENT);
 
@@ -118,10 +142,19 @@ exports.deleteComponentByID = (req, res) => {
     })
 }
 
+/////////
+////////
+///////
+//////
+/////
+////
+///
+//
 //
 // FIELD BY FIELD ID
 //
-// GET components/:componentID/fields/:fieldID
+// [GET] components/:componentID/fields/:fieldID
+//
 exports.getFieldByID = (req, res) => {
     console.log(GET, FIELD);
 
@@ -143,7 +176,9 @@ exports.getFieldByID = (req, res) => {
         return res.status(200).send(field);
     });
 }
-// PUT components/:componentID/fields/:fieldID
+//
+// [PUT] components/:componentID/fields/:fieldID
+//
 exports.updateFieldByID = (req, res) => {
     console.log(UPDATE, FIELD);
 
@@ -172,7 +207,9 @@ exports.updateFieldByID = (req, res) => {
         return res.status(200).send(component);
     });
 }
-// DELETE components/:componentID/fields/:fieldID
+//
+// [DELETE] components/:componentID/fields/:fieldID
+//
 exports.deleteFieldByID = (req, res) => {
     console.log(DELETE, FIELD);
 

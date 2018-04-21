@@ -1,0 +1,11 @@
+{
+    "fieldTypes": [
+        {
+            "type": "text"
+        }, {
+            "type": "select"
+        }, {
+            "type": "option"
+        }
+    ]
+}

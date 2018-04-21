@@ -1,0 +1,52 @@
+{
+    "components": [
+        {
+            "componentID": 0,
+            "name": "Component Name",
+            "fields": [
+                {
+                    "fieldID": 0,
+                    "name": "txtbox1",
+                    "type": "text",
+                    "label": "Text Box",
+                    "placeholder": "Enter text here..."
+                }, {
+                    "fieldID": 1,
+                    "name": "select1",
+                    "type": "select",
+                    "label": "Select an option",
+                    "placeholder": "Select option...",
+                    "options": [
+                        {
+                            "value": "1",
+                            "label": "Option 1"
+                        }, {
+                            "value": "2",
+                            "label": "Option 2"
+                        }, {
+                            "value": "3",
+                            "label": "Option 3"
+                        }, {
+                            "value": "4",
+                            "label": "Option 4"
+                        }
+                    ]
+                }, {
+                    "fieldID": 2,
+                    "name": "radio1",
+                    "type": "radio",
+                    "label": "Select one of these two",
+                    "options": [
+                        {
+                            "value": "A",
+                            "label": "Option A"
+                        }, {
+                            "value": "B",
+                            "label": "Option B"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

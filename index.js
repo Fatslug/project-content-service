@@ -18,8 +18,14 @@ app.set('port', process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080);
 app.use(bodyParser.json());
 
 // Routes
-const componentRoutes = require('./src/routes/component/component-routes')
+const componentRoutes = require('./src/routes/components/component-routes');
 app.use('/components', componentRoutes);
+
+const pageRoutes = require('./src/routes/pages/page-routes');
+app.use('/pages', pageRoutes);
+
+const contentRoutes = require('./src/routes/content/content-routes');
+app.use('/content', contentRoutes);
 
 // Start app
 app.listen(app.get('port'), () => {

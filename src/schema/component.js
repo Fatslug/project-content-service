@@ -3,9 +3,8 @@ const Schema = mongoose.Schema;
 const Field = require('./field');
 
 var ComponentSchema = new Schema({
-    componentID: Number,
     name: String,
-    fields: [Field.schema]
+    contentFields: [Field.schema]
 }, {
     collection: 'components'
 });

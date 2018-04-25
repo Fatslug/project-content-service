@@ -4,7 +4,7 @@ const Field = require('./field');
 
 var ComponentSchema = new Schema({
     name: String,
-    contentFields: [Field.schema]
+    fields: [Field.schema]
 }, {
     collection: 'components'
 });

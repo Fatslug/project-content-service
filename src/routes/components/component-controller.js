@@ -47,16 +47,16 @@ exports.getAllComponents = (req, res) => {
 exports.createComponent = (req, res) => {
     console.log(CREATE, ' a component');
     
-    const newComponent = new Component(req.body.component);
+    const component = new Component(req.body.component);
 
-    newComponent.save(err => {
+    component.save(err => {
         if (err) {
             console.log(chalk.red('✗'), chalk.red(err));
             return res.status(500).send(err);
         }
 
         console.log(chalk.green('✓'), "Component created!");
-        console.log(chalk.gray(newComponent));
+        console.log(chalk.gray(component));
         return res.sendStatus(200);
     });
 }

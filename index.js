@@ -21,11 +21,11 @@ app.use(bodyParser.json());
 const componentRoutes = require('./src/routes/components/component-routes');
 app.use('/components', componentRoutes);
 
-const pageRoutes = require('./src/routes/pages/page-routes');
-app.use('/pages', pageRoutes);
-
 const contentRoutes = require('./src/routes/content/content-routes');
 app.use('/content', contentRoutes);
+
+// const pageRoutes = require('./src/routes/pages/page-routes');
+// app.use('/pages', pageRoutes);
 
 // Start app
 app.listen(app.get('port'), () => {
